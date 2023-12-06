@@ -1,0 +1,181 @@
+header {
+    background-color: black;
+}
+
+.headContainer {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px
+}
+
+#logoBanner {
+    height:70px;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#hamburgerMenu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.hamBar{
+    width: 70%;
+    height: 4px;
+    background-color: #F7951F;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .6s, opacity .8s, top .6s;
+}
+
+.barTop {
+    top: 25%;
+}
+
+.barBot {
+    top: 75%;
+}
+
+#hamburgerMenu.active .barTop {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+}
+
+#hamburgerMenu.active .barMid {
+    opacity: 0;
+}
+
+#hamburgerMenu.active .barBot {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}
+
+#offScreenMenu {
+    position: fixed;
+    top: 102px;
+    right: -180px;
+    background-color: #111111;
+    width: 180px;
+    transition: right .5s;
+    padding: 0 0 10px 10px;
+    border-radius: 0 0 0 10px;
+    border-bottom: 2px solid #458FCC;
+    border-left: 2px solid #458FCC;
+}
+
+#offScreenMenu li {
+    width: 160px;
+    padding: 8px;
+}
+
+#offScreenMenu a {
+    color: #F7951F;
+    font-weight: bolder;
+}
+
+#offScreenMenu.active {
+    right: 0;
+}
+
+#subList {
+    font-size: 0.8rem;
+    text-align: right;
+    display: none;
+}
+
+#subList.active {
+    display: block;
+}
+
+#barMenu ul {
+    display: none;
+}
+
+#barMenu ul li {
+    font-size: 0.8rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 20px;
+}
+
+#barMenu ul li a {
+    color: #F7951F;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #458FCC;
+    border-radius: 0 0 5px 5px;
+}
+
+#barSubList {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: -122px;
+    right: 26%;
+    background-color: #111111;
+    transition: top .5s;
+    padding: 15px;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid #458FCC;
+}
+
+#barSubList.active {
+    top: 70px;
+}
+
+#barSubList li {
+    padding: 3px;
+    margin-right: 20px;
+}
+
+#barSubList li a {
+    color: #F7951F;
+    border-bottom: none !important;
+}
+
+#socialMedia {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.headLogoContainer {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 12px
+}
+
+.headLogoContainer img {
+    width: 28px;
+    margin-right: 20px;
+    /* cursor: pointer; */
+}
+
+@media only screen and (min-width: 652px) {
+    #hamburgerMenu {
+        display: none;
+    }
+
+    #offScreenMenu {
+        display: none;
+    }
+
+    #barMenu ul {
+        display: flex;
+    }
+}

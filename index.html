@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-    Porfolio Created with Bootstrap
+    Porfolio Created with Bootstrap, jQuery & CSS Grid
     last Updated 06/12/2023
 -->
 <html lang="en">
@@ -17,14 +17,77 @@
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
+    <link rel="stylesheet" type="text/css" href="css/headerstyles.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
 
   <body>
-    <header></header>
+    <header>
+        <div class="headContainer">
+            <img id="logoBanner" src="images/LogoBanner.png" alt="Light Imaginations Logo Banner">
+            <div id="offScreenMenu">
+                <ul>
+                    <li><a class="menuButton" href="#">Home</a></li>
+                    <li><a id="projectGallery" href="#">Project Gallery</a></li>
+                        <ul id="subList">
+                            <li><a class="menuButton" href="#">Web Development</a></li>
+                            <li><a class="menuButton" href="#">Garmin Development</a></li>
+                            <li><a class="menuButton" href="#">Graphic Design</a></li>
+                            <li><a class="menuButton" href="#">App Development</a></li>
+                        </ul>
+                    <li><a class="menuButton" href="#">Resume</a></li>
+                    <li><a class="menuButton" href="#">About</a></li>
+                    <li><a class="menuButton" href="#">Contact Me</a></li>
+                </ul>
+            </div>
+            <nav>
+                <div id="hamburgerMenu">
+                    <div class="hamBar barTop"></div>
+                    <div class="hamBar barMid"></div>
+                    <div class="hamBar barBot"></div>
+                </div>
+                <div id="barMenu">
+                    <ul>
+                        <li><a class="barMenuButton" href="#">Home</a></li>
+                        <li><a id="barProjectGallery" href="#">Project Gallery</a></li>
+                            <ul id="barSubList">
+                                <li><a class="barMenuButton" href="#">Web Development</a></li>
+                                <li><a class="barMenuButton" href="#">Garmin Development</a></li>
+                                <li><a class="barMenuButton" href="#">Graphic Design</a></li>
+                                <li><a class="barMenuButton" href="#">App Development</a></li>
+                            </ul>
+                        <li><a class="barMenuButton" href="#">Resume</a></li>
+                        <li><a class="barMenuButton" href="#">About</a></li>
+                        <li><a class="barMenuButton" href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="socialMedia">
+        <div class="headLogoContainer">
+            <a href="https://www.linkedin.com/in/dean-waring-560593294/" target="_blank">
+                <img src="images/socialMediaIcons/003-linkedin.png" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com/deanw77" target="_blank">
+                <img src="images/socialMediaIcons/001-github.png" alt="Github Logo">
+            </a>
+            <a href="#">
+                <img src="images/socialMediaIcons/004-facebook.png" alt="Facebook Logo">
+            </a>
+            <a href="#">
+                <img src="images/socialMediaIcons/005-twitter.png" alt="Twitter Logo">
+            </a>
+            <a href="#">
+                <img src="images/socialMediaIcons/008-messenger.png" alt="Messenger Logo">
+            </a>
+        </div>
+    </section>
+
     <main></main>
     <footer></footer>
 
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 
